@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  background-color: #f3f3f3;
+  color: #222222;
+  font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.page {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 40px 0 72px;
+}
+
+.hero {
+  margin-bottom: 44px;
+}
+
+.hero__title {
+  margin: 0 0 10px;
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.hero__desc {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #5d5d5d;
+}
+
+.section-title {
+  display: inline-block;
+  margin: 0 0 24px;
+  padding: 2px 4px;
+  font-size: 1.9rem;
+  font-weight: 800;
+  background-color: #905a0a;
+}
+
+.summary-section {
+  margin-bottom: 56px;
+}
+
+.card-grid,
+.detail-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  padding: 22px;
+  background-color: #d9d9dd;
+  border-radius: 28px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  background-color: #ececec;
+  border: 2px solid transparent;
+  border-radius: 16px;
+}
+
+.summary-card--mine {
+  border-color: #4e6ef2;
+}
+
+.summary-card__media {
+  position: relative;
+}
+
+.summary-card__image {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.summary-card__badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background-color: #e8e8e8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #444444;
+}
+
+.summary-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px 16px 16px;
+}
+
+.summary-card__name {
+  margin: 0;
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.summary-card__part {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #4e6ef2;
+}
+
+.summary-card--mine .summary-card__part {
+  color: #86a91f;
+}
+
+.summary-card__line {
+  margin: 0;
+  font-size: 0.98rem;
+  color: #4f4f4f;
+}
+
+.summary-section {
+  max-width: 1200px;     
+  margin: 40px auto;     
+  padding: 30px;
+  background: #e9ecef;  
+  border-radius: 20px;   }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 22px;
+  background-color: #d9d9dd;
+  border-radius: 28px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.detail-card {
+  padding: 24px 24px 22px;
+  background-color: #ececec;
+  border-radius: 14px;
+}
+
+.detail-card__header {
+  margin-bottom: 16px;
+}
+
+.detail-card__name {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.detail-card__part {
+  margin: 4px 0 0;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #4e6ef2;
+}
+
+.detail-card__club {
+  margin: 2px 0 0;
+  font-size: 0.92rem;
+  color: #666666;
+}
+
+.detail-card__section + .detail-card__section {
+  margin-top: 18px;
+}
+
+.detail-card__subtitle {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.detail-card__section p {
+  margin: 0;
+  color: #444444;
+}
+
+.detail-card__skills,
+.detail-card__contact {
+  margin: 0;
+  padding-left: 20px;
+  color: #444444;
+}
+
+.detail-card__quote {
+  margin: 20px 0 0;
+  font-weight: 700;
+  color: #555555;
+}
+
+@media (max-width: 1023px) {
+  .page {
+    width: min(960px, calc(100% - 32px));
+    padding-top: 32px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero__title {
+    font-size: 1.95rem;
+  }
+
+  .section-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .page {
+    width: calc(100% - 24px);
+    padding-top: 24px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 18px;
+    border-radius: 22px;
+  }
+
+  .detail-list {
+    padding: 16px;
+    gap: 18px;
+    border-radius: 22px;
+  }
+
+  .summary-card__body,
+  .detail-card {
+    padding: 16px;
+  }
+
+  .hero__title {
+    font-size: 1.7rem;
+  }
+
+  .hero__desc {
+    font-size: 0.98rem;
+  }
+
+  .section-title {
+    font-size: 1.45rem;
+  }
+
+  .summary-card__name,
+  .detail-card__name {
+    font-size: 1.45rem;
+  }
+}

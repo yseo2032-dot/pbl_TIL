@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>아기 사자 명단</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="container">
+
+    <section class="control-area">
+    <button id="addBtn">아기 사자 추가</button>
+    <button id="deleteBtn">마지막 아기 사자 삭제</button>
+    <span id="totalCount">총 0명</span>
+    </section>
+        <section class="control-area">
+        <button id="randomOneBtn">랜덤 1명 추가</button>
+        <button id="randomFiveBtn">랜덤 5명 추가</button>
+        <button id="resetBtn">전체 새로고침</button>
+        <span id="status">준비완료</span>
+        <button id="retryBtn" class="hidden">재시도</button>
+        </section>
+    <section class="filter-area">
+        <label for="partFilter">파트</label>
+        <select id="partFilter">
+        <option value="all">전체</option>
+         <option value="Frontend">Frontend</option>
+        <option value="Backend">Backend</option>
+        <option value="Design">Design</option>
+  </select>
+
+  
+
+  <label for="sortFilter">정렬</label>
+  <select id="sortFilter">
+    <option value="latest">최신추가순</option>
+    <option value="name">이름순</option>
+  </select>
+
+  <label for="searchInput">검색</label>
+  <input id="searchInput" type="text" placeholder="이름으로 검색">
+</section>
+
+    <form id="lionForm" class="form-area hidden">
+
+      <div class="form-group">
+        <label for="name">이름</label>
+        <input id="name" type="text" placeholder="예: 홍아기사자" required>
+      </div>
+
+      <div class="form-group">
+        <label for="part">파트</label>
+        <select id="part" required>
+          <option value="Frontend">Frontend</option>
+          <option value="Backend">Backend</option>
+          <option value="Design">Design</option>
+        </select>
+      </div>
+
+      <div class="form-group full">
+        <label for="skills">관심 기술 (쉼표로 구분)</label>
+        <input id="skills" type="text" placeholder="예: JavaScript, React, HTML/CSS" required>
+      </div>
+
+      <div class="form-group full">
+        <label for="summary">한 줄 소개 (요약 카드)</label>
+        <input id="summary" type="text" placeholder="예: 3주차 DOM 조작 연습 중!" required>
+      </div>
+
+      <div class="form-group full">
+        <label for="detail">자기소개 (상세 카드)</label>
+        <textarea id="detail" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="예: lion@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input id="phone" type="text" placeholder="예: 010-1234-5678">
+      </div>
+
+      <div class="form-group full">
+        <label for="site">Website</label>
+        <input id="site" type="url" placeholder="예: https://example.com" required>
+      </div>
+
+      <div class="form-group full">
+        <label for="comment">한 마디</label>
+        <input id="comment" type="text" placeholder="예: 데이터 바꾸면 화면도 바뀐다!">
+      </div>
+
+      <div class="form-actions">
+        <button id="autoFillBtn" type="button">랜덤 값 채우기</button>
+        <button id="submitBtn" type="submit">추가하기</button>
+        <button id="cancelBtn" type="button">취소</button>
+      </div>
+
+    </form>
+
+    <section class="card-area">
+      <div id="cardGrid" class="card-grid"></div>
+    </section>
+
+    <section class="detail-area">
+      <div id="detailList"></div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
